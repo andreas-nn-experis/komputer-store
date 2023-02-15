@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Komputer Store</title>
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <meta charset="utf-8">
+    <link href="default.css" rel="stylesheet" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+</head>
+
+<body onLoad="hideRepayLoanButton()">
+    <div class="container">
+        <div class="header">Komputer Store<sup>®</sup></div>
+        <div class="section">Bank
+            <p class="small-text" id="bank-balance">Balance: 0 kr.</p>
+            <p class="small-text" id="outstanding-loan"></p>
+            <button class="button" id="loan-button" onclick="getALoan()">Get a loan</button>
+        </div>
+        <div class="section">Work
+            <p class="small-text" id="pay-amount">Pay: 0 kr.</p>
+            <button class="button" id="bank-button" onclick="payToBank()">Bank</button>
+            <button class="button" id="work-button" onclick="workAndEarn()">Work</button>
+            <button class="button" id="repay-loan-button" onclick="repayLoan()">Repay Loan</button>
+        </div>
+            <div class="section">Laptops
+                <br>
+                <select name="Laptops" id="laptop-list-selector" title="laptop-list-selector"></select>
+                <br>
+                <span class="small-text"><strong>Specs:</strong></span>
+                <ul class="small-text" id="laptop-specs">
+                </ul>
+            </div>
+        <div class="full-width-section" id="laptop-view">
+            <span id="laptop-title"></span>
+            <br>
+            <br>
+            <img class="small-text-right" id="laptop-image"src ="" alt="Picture of computer" width="160" height="160";>
+            
+            <span class="small-text-right" id="laptop-description"></span>
+            <span class="small-text-bottom-right">Price: </span>
+            <span class="small-text-bottom-right" id="laptop-price"></span>
+            <br>
+            <button class="button" id="buy-now-button" onclick="buyLaptop()"">Buy now</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
